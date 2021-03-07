@@ -3,12 +3,14 @@
   <div class="row">
     <div class="col-12">
       <input
-      [(ngModel)]="filterText"
-      type="text"
-      class="form-control"
-      placeholder="Search product..."
-    />
-    <small *ngIf="filterText" > "{{ filterText }}" are listing below. </small>
+        [(ngModel)]="filterText"
+        type="text"
+        class="form-control"
+        placeholder="Search product..."
+      />
+      <small *ngIf="filterText">
+        <strong>"{{ filterText }}"</strong> are listing below.
+      </small>
     </div>
   </div>
 </div>
@@ -19,10 +21,17 @@
     style="width: 18rem"
     *ngFor="let card of ProductList | productFilter: filterText"
   >
+    <img
+      style="max-width: 100%; height: auto"
+      src="https://picsum.photos/300"
+      class="card-img-top m-1"
+      alt="..."
+    />
     <div class="card-body">
       <h5 class="card-title">{{ card.name }}</h5>
       <h6 class="card-subtitle mb-2 text-muted">{{ card.price }}</h6>
       <p class="card-text">{{ card.desc }}</p>
+      <a (click)="addToCart(card)" class="btn btn-primary">Add to Cart</a>
     </div>
   </div>
 </div>

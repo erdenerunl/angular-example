@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from './product';
+import  * as alertify from "alertifyjs"; 
 
 @Component({
   selector: 'app-product',
@@ -9,6 +10,7 @@ import { Product } from './product';
 export class ProductComponent implements OnInit {
 
   constructor() { }
+  
   title = "Product List";
   filterText = "";
   ProductList: Product[] = [
@@ -20,7 +22,12 @@ export class ProductComponent implements OnInit {
     {id:6, price:2500, name: "MacBook", categoryId:6, desc: "It is a macbook."},
 
   ];
+
   ngOnInit(): void {
+  }
+
+  addToCart(product: Product){
+    alertify.success("Successful : " + product.name)
   }
 
 }
