@@ -10,6 +10,7 @@ export class ProductComponent implements OnInit {
 
   constructor() { }
   title = "Product List";
+  filterText = "";
   ProductList: Product[] = [
     {id:1, price:2500, name: "MacBook", categoryId:1, desc: "It is a macbook."},
     {id:2, price:2500, name: "Laptop", categoryId:2, desc: "It is a macbook."},

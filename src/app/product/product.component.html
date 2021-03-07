@@ -1,7 +1,24 @@
 <h3 *ngIf="ProductList; else alertMessage">{{ title }}</h3>
+<div class="input-group mb-3">
+  <div class="row">
+    <div class="col-12">
+      <input
+      [(ngModel)]="filterText"
+      type="text"
+      class="form-control"
+      placeholder="Search product..."
+    />
+    <small *ngIf="filterText" > "{{ filterText }}" are listing below. </small>
+    </div>
+  </div>
+</div>
 <ng-template #alertMessage> There is no product in this category. </ng-template>
 <div class="row">
-  <div class="card" style="width: 18rem" *ngFor="let card of ProductList">
+  <div
+    class="card"
+    style="width: 18rem"
+    *ngFor="let card of ProductList | productFilter: filterText"
+  >
     <div class="card-body">
       <h5 class="card-title">{{ card.name }}</h5>
       <h6 class="card-subtitle mb-2 text-muted">{{ card.price }}</h6>
