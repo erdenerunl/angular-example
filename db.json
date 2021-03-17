@@ -8,8 +8,9 @@
         {"id":6, "price":2500, "name": "MacBook", "categoryId":6, "desc": "It is a macbook."}
     ],
     "categories": [
-        { "id":1, "name": "Laptop"},
-        { "id":2, "name": "Automobile"},
-        { "id":3, "name": "Other"}
+        { "id":1, "name": "Show All"},
+        { "id":2, "name": "Laptop"},
+        { "id":3, "name": "Automobile"},
+        { "id":4, "name": "Other"}
     ]
 }
