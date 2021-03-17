@@ -1,0 +1,15 @@
+{
+    "products": [
+        {"id":1, "price":2500, "name": "MacBook", "categoryId":1, "desc": "It is a macbook."},
+        {"id":2, "price":2500, "name": "Laptop", "categoryId":2, "desc": "It is a macbook."},
+        {"id":3, "price":2500, "name": "Fridge", "categoryId":3, "desc": "It is a macbook."},
+        {"id":4, "price":2500, "name": "Automobile", "categoryId":4, "desc": "It is a macbook."},
+        {"id":5, "price":2500, "name": "MacBook", "categoryId":5, "desc": "It is a macbook."},
+        {"id":6, "price":2500, "name": "MacBook", "categoryId":6, "desc": "It is a macbook."}
+    ],
+    "categories": [
+        { "id":1, "name": "Laptop"},
+        { "id":2, "name": "Automobile"},
+        { "id":3, "name": "Other"}
+    ]
+}
