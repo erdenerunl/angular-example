@@ -1,5 +1,5 @@
 
 <h3> {{title}} </h3>
 <div class="list-group">
-    <a href="#" class="list-group-item" *ngFor="let category of categoryList" > {{category.id}}.{{category.name}} </a>
+    <a href="#" class="list-group-item" *ngFor="let category of categoryList" routerLink="products/category/{{category.id}}" > {{category.id}}.{{category.name}} </a>
 </div> 
