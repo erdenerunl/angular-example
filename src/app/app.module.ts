@@ -7,7 +7,13 @@ import { CategoryComponent } from './category/category.component';
 import { ProductComponent } from './product/product.component';
 import { ProductFilterPipe } from './product/product-filter.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
 
+
+const routes: Routes = [
+  {path: 'products', component: ProductComponent},
+  {path: '', redirectTo: 'products', pathMatch: 'full'}
+]
 
 @NgModule({
   declarations: [
@@ -20,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
