@@ -1,0 +1,25 @@
+<div class="mx-3">
+  <h3>Add Product with Classic Form</h3>
+  <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Product Name</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" #name="ngModel" name="name" [(ngModel)]="model.name" required />
+      <div *ngIf="name.invalid && name.dirty" class="alert alert-danger">Invalid name.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Products Price</label>
+      <input type="number" class="form-control" id="exampleInputPassword1" #price="ngModel" name="price" [(ngModel)]="model.price" required />
+      <div *ngIf="price.invalid && price.dirty" class="alert alert-danger">Invalid price.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Product Description</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" #desc="ngModel" name="desc" [(ngModel)]="model.desc" required />
+      <div *ngIf="desc.invalid && desc.dirty" class="alert alert-danger">Invalid desc.</div>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
